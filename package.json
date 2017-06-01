@@ -1,0 +1,16 @@
+{
+  "name": "bogfox-bot",
+  "version": "0.0.0",
+  "description": "Bot for bogfox discord server",
+  "main": "bot.js",
+  "author": "Karl He <karl.he@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^11.1.0",
+    "mongodb": "^2.2.27"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
