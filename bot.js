@@ -1,6 +1,7 @@
 'use strict';
 
 // https://discordapp.com/api/oauth2/authorize?client_id=318229413479186432&scope=bot&permissions=00311240
+// https://discordapp.com/api/oauth2/authorize?client_id=320119766222241792&scope=bot&permissions=00311240
 
 const Discord = require('discord.js');
 const client = new Discord.Client();
@@ -16,13 +17,18 @@ client.on('ready', () => {
 client.on('message', message => {
   if(message.author.bot) return; // Do not talk to bots
 
-  if(message.content === 'ping') {
-    message.reply('pong');
+  if(message.content === "!help") {
+    message.reply('LOL');
     return;
   }
 
   if(message.content === '!countsames') {
     counter.countSames(message);
+    return;
+  }
+
+  if(message.content === '!singrandom') {
+    message.channel.send(karaoke.singRandom());
     return;
   }
 
@@ -45,6 +51,7 @@ client.on('message', message => {
     ]
     var msg = 'Did someone say TWICE? ' + links[Math.floor(Math.random()*links.length)];
     message.channel.send(msg)
+    return;
   }
 });
 
